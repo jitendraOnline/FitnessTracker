@@ -1,0 +1,27 @@
+<mat-list >
+    <mat-list-item *ngIf="!Authed"> 
+        <a routerLink="/login" (click)="closeSideNav()">
+            <mat-icon>security</mat-icon>&nbsp;
+           <span>Login</span>
+        </a>
+    </mat-list-item>
+    <mat-list-item  *ngIf="!Authed"> 
+        <a routerLink="/signup" (click)="closeSideNav()">
+            <mat-icon>person_add</mat-icon>&nbsp; 
+             <span>SignUp</span>
+        </a> 
+    </mat-list-item >
+    <mat-list-item *ngIf="Authed"> 
+        <a routerLink="/training" (click)="closeSideNav()">
+            <mat-icon>business_center</mat-icon>&nbsp; 
+             <span>Training</span>
+         </a> 
+        </mat-list-item>
+
+        <mat-list-item *ngIf="Authed"> 
+            <a (click)="logout()">
+                <mat-icon>clear</mat-icon>&nbsp; 
+                 <span>LogOut</span>
+             </a> 
+            </mat-list-item>
+</mat-list>

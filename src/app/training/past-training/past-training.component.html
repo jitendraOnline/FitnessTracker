@@ -1,0 +1,9 @@
+<p *ngFor="let previousTestSeries of PreviousTestSeries">
+  
+  <mat-spinner *ngIf="isloading"></mat-spinner>
+ <mat-card *ngIf="!isloading" >
+   <p>The test series name is :{{previousTestSeries?.TestSeriesName}}</p>
+   <p>About :{{previousTestSeries?.Description}}</p>
+   <p>total number of test:{{previousTestSeries?.noOfTest}}</p>
+ </mat-card>
+</p>

@@ -1,0 +1,33 @@
+<div>
+    <section>
+      <mat-card>
+          <mat-card-subtitle>
+            Please add details to Test Series
+          </mat-card-subtitle>
+          <mat-card-content>
+            <form class="flexContainer" (ngSubmit)="onSubmit(testSeries)" #testSeries="ngForm">
+                <mat-form-field class="example-full-width">
+                    <input matInput placeholder="Test Series Name" ngModel name="TestSeriesName" >
+                  </mat-form-field>
+                
+                  <mat-form-field class="example-full-width">
+                    <textarea matInput placeholder="Description" ngModel name="Description"></textarea>
+                  </mat-form-field>
+
+                  <mat-form-field class="example-full-width"  >
+                      <input matInput placeholder="No. Of Tests" ngModel name="noOfTest" >
+                   </mat-form-field>
+
+                   <mat-radio-group ngModel name="typeOftest">
+                      <mat-radio-button value="1">Private</mat-radio-button>&nbsp;
+                      <mat-radio-button value="2">Public</mat-radio-button>
+                    </mat-radio-group>
+
+                   <button mat-raised-button color="accent">Create</button>
+                   <mat-spinner  diameter="50" color="accent" *ngIf="isloading"></mat-spinner>
+                   
+            </form>
+          </mat-card-content>
+      </mat-card>
+    </section>
+</div>

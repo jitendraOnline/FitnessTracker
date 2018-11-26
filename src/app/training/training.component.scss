@@ -1,0 +1,27 @@
+.customCard{
+    margin:15px;
+    box-sizing: border-box;
+    position: relative;
+    border: 1px rgb(105, 105, 119) solid;
+    &__title{
+        padding: 7px;
+        position: absolute;
+        left: 5px;
+        top:-15px;
+        background-color: white;
+    }
+    &__routeContent{
+        margin: 10px;
+    }
+    &__content{
+        margin: 10px;
+    }
+}
+
+.flexContainer{
+    display: flex;
+    flex-direction: row;
+    @media only screen and (max-width: 800px) {
+        flex-direction: column; 
+    }
+}

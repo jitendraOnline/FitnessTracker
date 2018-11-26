@@ -1,0 +1,8 @@
+.flexContainer{
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    :last-child{
+        margin: 5px;
+    }
+}

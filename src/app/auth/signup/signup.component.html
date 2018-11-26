@@ -1,0 +1,38 @@
+<section class="container">
+
+<div class="from-out">
+  <mat-card>
+  <form class="from-out__container" (ngSubmit)="onSubmit(signUp)" #signUp="ngForm">
+
+  <mat-form-field>
+    <input matInput type="email" placeholder="Your email" ngModel name="email" >
+  </mat-form-field>
+
+  <mat-form-field>
+     <input matInput type="password" placeholder="Password" ngModel #password="ngModel" name="password">
+   </mat-form-field>
+  
+  <mat-form-field>
+     <input matInput type="password" placeholder="Confirm password" ngModel #cpassword="ngModel"  name="cpassword">
+     <mat-error >Password does not match</mat-error>
+  </mat-form-field>
+  
+
+  <mat-form-field>
+    <input matInput [matDatepicker]="picker" placeholder="Choose date of birth" ngModel name="Dob">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+
+  <mat-checkbox >You accept tems and condition </mat-checkbox>
+
+
+  <button mat-raised-button color="primary" type="submit">Register</button>
+
+  </form>
+
+  <p *ngIf="invalidCredentials">{{errorMessage}}</p>
+  </mat-card>
+</div>
+
+</section>

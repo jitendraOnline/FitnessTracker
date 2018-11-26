@@ -1,0 +1,10 @@
+<mat-toolbar color="primary" class="toolbarContainer">
+    <mat-icon (click)="openSideNav()" class="example-icon">menu</mat-icon> &nbsp;
+    <h2 routerLink="/welcome">Online Exam</h2>  
+       <ul class="LinkOption">
+           <a routerLink="/login" *ngIf="!Authed">Login</a>
+           <a routerLink="/signup" *ngIf="!Authed">SignUp</a>
+           <a routerLink="/training" *ngIf="Authed">Training</a>
+           <a *ngIf="Authed" (click)="logout()">Log out</a>
+       </ul>
+   </mat-toolbar>

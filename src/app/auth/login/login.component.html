@@ -1,0 +1,23 @@
+<section class="container">
+
+  <div class="from-out">
+    <mat-card  >
+    <form class="from-out__container" (ngSubmit)="onSubmit(authForm)" #authForm="ngForm">
+  
+    <mat-form-field>
+      <input matInput type="email" placeholder="Your email" ngModel name="email" required>
+    </mat-form-field>
+  
+    <mat-form-field>
+       <input matInput type="password" placeholder="Password" ngModel name="password" required>
+     </mat-form-field>
+
+    <button mat-raised-button type="submit" color="primary"><span *ngIf="!isloading">Login</span> <span *ngIf="isloading"><mat-spinner  diameter="20" color="accent"></mat-spinner></span></button>
+    
+    </form> 
+    </mat-card>
+
+   
+  </div>
+  
+  </section>

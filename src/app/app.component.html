@@ -1,0 +1,19 @@
+
+<mat-sidenav-container class="example-container" >
+
+    <mat-sidenav #Sidenav role="navigation" >
+        <app-side-navlist (closesideNav)="Sidenav.close()"></app-side-navlist>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+
+        <app-headers (opensideNav)="Sidenav.toggle()"></app-headers>
+
+        <main>
+            <router-outlet>
+            </router-outlet>
+        </main>
+
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+

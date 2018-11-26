@@ -1,0 +1,27 @@
+<mat-tab-group >
+  <mat-tab label="Past Exams">
+    <app-past-training></app-past-training>
+  </mat-tab>
+  <mat-tab label="Create Exams">
+    <div class="flexContainer">
+      <section class="customCard">
+        <div class="customCard__title">MakeSelection</div>
+        <div class="customCard__routeContent">
+          <app-new-training (test)="log($event)"></app-new-training>
+        </div>
+      </section>
+      <section class="customCard" *ngIf="testDetails">
+        <div class="customCard__title">Overview</div>
+        <div class="customCard__content">
+          <mat-card>
+            <mat-card-subtitle>{{testDetails?.value?.TestSeriesName}}</mat-card-subtitle>
+          </mat-card>
+        </div>
+      </section>
+    </div>
+  </mat-tab>
+  <mat-tab label="Draft Exams">
+    <app-current-taining></app-current-taining>
+  </mat-tab>
+</mat-tab-group>
+<mat-spinner *ngIf="isloading"></mat-spinner>
